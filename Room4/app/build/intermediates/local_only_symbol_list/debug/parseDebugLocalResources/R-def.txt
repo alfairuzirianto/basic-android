@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_add
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_settings
+id btn_settings
+id btn_tambah
+id et_nama
+id itemDelete
+id itemUpdate
+id main
+id rv_utama
+id tv_nama
+layout activity_main
+layout row_add
+layout row_items
+menu menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Room4
+style Theme.Room4
+xml backup_rules
+xml data_extraction_rules

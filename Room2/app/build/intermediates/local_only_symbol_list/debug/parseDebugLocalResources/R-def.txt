@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_add
+drawable ic_delete
+drawable ic_edit
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_simpan
+id btn_tambah
+id et_nama
+id header
+id imgDelete
+id imgEdit
+id main
+id rv_utama
+id tvNama
+id tv_header
+id view
+layout activity_main
+layout activity_tambah_mahasiswa
+layout dialog_edit
+layout dialog_tambah
+layout item_layout
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Room2
+style Theme.Room2
+xml backup_rules
+xml data_extraction_rules

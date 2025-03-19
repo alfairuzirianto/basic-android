@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:layout_marginTop="30dp">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Jenis kelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/pria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pria"/>
+        <RadioButton
+            android:id="@+id/perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Agama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/islam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Islam" />
+        <RadioButton
+            android:id="@+id/kristen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kristen"/>
+        <RadioButton
+            android:id="@+id/hindu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hindu"/>
+        <RadioButton
+            android:id="@+id/budha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budha"/>
+    </RadioGroup>
+</LinearLayout>

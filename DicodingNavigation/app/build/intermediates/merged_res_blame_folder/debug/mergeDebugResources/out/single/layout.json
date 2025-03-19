@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-mergeDebugResources-43:\\layout\\fragment_category.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-main-46:\\layout\\fragment_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-mergeDebugResources-43:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-main-46:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-mergeDebugResources-43:\\layout\\fragment_detail_category.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-main-46:\\layout\\fragment_detail_category.xml"
+    },
+    {
+        "merged": "com.example.dicodingnavigation.app-mergeDebugResources-43:/layout/activity_profile.xml",
+        "source": "com.example.dicodingnavigation.app-main-46:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-mergeDebugResources-43:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-main-46:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-mergeDebugResources-43:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.dicodingnavigation.app-main-46:\\layout\\fragment_home.xml"
+    }
+]

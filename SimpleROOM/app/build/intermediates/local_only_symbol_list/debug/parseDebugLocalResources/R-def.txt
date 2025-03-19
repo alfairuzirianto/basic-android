@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_add
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_menu
+id btn_menu
+id btn_tambah
+id et_nama
+id main
+id menu_hapus
+id menu_ubah
+id rv_utama
+id tv_empty
+id tv_header
+id tv_nama
+id tv_nim
+layout activity_main
+layout card_view
+layout dialog_box
+menu menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.SimpleROOM
+style Theme.SimpleROOM
+xml backup_rules
+xml data_extraction_rules

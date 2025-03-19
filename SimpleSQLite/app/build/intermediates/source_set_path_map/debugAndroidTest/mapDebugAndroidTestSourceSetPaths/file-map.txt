@@ -1,0 +1,5 @@
+com.example.simplesqlite.test.app-core-1.6.1-0 C:\Users\ALFI\.gradle\caches\8.9\transforms\12d4ceea12d68d94d028487ee64e9ffc\transformed\core-1.6.1\res
+com.example.simplesqlite.test.app-androidTest-1 D:\Android Studio\SimpleSQLite\app\build\generated\res\resValues\androidTest\debug
+com.example.simplesqlite.test.app-mergeDebugAndroidTestResources-2 D:\Android Studio\SimpleSQLite\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.simplesqlite.test.app-mergeDebugAndroidTestResources-3 D:\Android Studio\SimpleSQLite\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.simplesqlite.test.app-debugAndroidTest-4 D:\Android Studio\SimpleSQLite\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

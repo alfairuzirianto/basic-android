@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id TombolBackToTambah
+id TombolTambah
+id TombolTampil
+id buttonDelete
+id buttonUpdate
+id editTextAlamat
+id editTextIdSiswa
+id editTextJk
+id editTextNamaSiswa
+id editTextNis
+id listViewSiswa
+id textListAlamat
+id textListIdSiswa
+id textListJk
+id textListNamaSiswa
+id textListNis
+layout activity_main
+layout activity_siswa_tampil
+layout activity_siswa_tampil_detail
+layout list_siswa
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.DataSekolah
+style Theme.DataSekolah
+xml backup_rules
+xml data_extraction_rules

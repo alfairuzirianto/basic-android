@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.room2.app-mergeDebugResources-38:/layout/item_layout.xml",
+        "source": "com.example.room2.app-main-41:/layout/item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-mergeDebugResources-38:\\layout\\item_layout.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-main-41:\\layout\\item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-mergeDebugResources-38:\\layout\\dialog_edit.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-main-41:\\layout\\dialog_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-mergeDebugResources-38:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-main-41:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-mergeDebugResources-38:\\layout\\activity_tambah_mahasiswa.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-main-41:\\layout\\activity_tambah_mahasiswa.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-mergeDebugResources-38:\\layout\\dialog_tambah.xml",
+        "source": "C:\\Users\\ALFI\\.gradle\\daemon\\8.9\\com.example.room2.app-main-41:\\layout\\dialog_tambah.xml"
+    }
+]
