@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Usn, pw, nama, telp, email (Linear)-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:paddingVertical="18dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingVertical="18dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama lengkap"
+            android:inputType="text"
+            android:paddingVertical="18dp"
+            android:drawableStart="@drawable/ic_create"
+            android:drawablePadding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor telepon"
+            android:inputType="number"
+            android:paddingVertical="18dp"
+            android:drawableStart="@drawable/ic_call"
+            android:drawablePadding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat email"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="18dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="6dp"/>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SAVE"/>
+    </LinearLayout>
+
+</LinearLayout>

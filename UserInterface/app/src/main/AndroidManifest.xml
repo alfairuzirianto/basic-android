@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.userinterface">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UserInterface"
+        tools:targetApi="31">
+        <activity
+            android:name=".MenuUtama"
+            android:exported="false"
+            android:label="@string/title_activity_menu_utama"
+            android:theme="@style/Theme.UserInterface.NoActionBar" />
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.UserInterface"></activity> <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity> <!-- Login Relative Activity -->
+        <activity
+            android:name=".LoginRelative"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity> <!-- Login Relative Asset Activity -->
+        <activity
+            android:name=".LoginRelativeAssetActivity"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity> <!-- Login Relative Activity -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity> <!-- Login Toggle Activity -->
+        <activity
+            android:name=".HandleTampilan"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.UserInterface">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Login Relative Toggle Activity -->
+        <activity
+            android:name=".LoginActivity1"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity>
+        <activity
+            android:name=".LoginToggle"
+            android:exported="true"
+            android:theme="@style/Theme.UserInterface"></activity>
+    </application>
+
+</manifest>
