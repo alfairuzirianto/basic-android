@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">DJMAG</string>
+    <string name="title_header">Top 10 DJs 2024</string>
+    <string name="dj_rank">01</string>
+    <string name="dj_name">DJ Name</string>
+    <string name="dj_desc">DJ Description</string>
+    <string name="btn_like">Like</string>
+    <string name="btn_share">Share</string>
+    <string name="detail_overview">Overview</string>
+    <string name="detail_recent_release">Recent Release</string>
+    <string name="nama">Muhammad Alfairuz Irianto</string>
+    <string name="email">alfrzmhmmd@gmail.com</string>
+
+    <string-array name="djs_rank">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+    </string-array>
+
+    <integer-array name="djs_photo">
+        <item>@drawable/martingarrix</item>
+        <item>@drawable/davidguetta</item>
+        <item>@drawable/dvlm</item>
+        <item>@drawable/alok</item>
+        <item>@drawable/timmytrumpet</item>
+        <item>@drawable/arminvanbuuren</item>
+        <item>@drawable/afrojack</item>
+        <item>@drawable/fisher</item>
+        <item>@drawable/vintageculture</item>
+        <item>@drawable/peggygou</item>
+    </integer-array>
+
+    <string-array name="djs_name">
+        <item>Martin Garrix</item>
+        <item>David Guetta</item>
+        <item>Dimitri Vegas &amp; Like Mike</item>
+        <item>Alok</item>
+        <item>Timmy Trumpet</item>
+        <item>Armin Van Buuren</item>
+        <item>Afrojack</item>
+        <item>Fisher</item>
+        <item>Vintage Culture</item>
+        <item>Peggy Gou</item>
+    </string-array>
+
+    <string-array name="djs_desc">
+        <item>Martijn Gerard Garritsen known professionally as Martin Garrix and also as Ytram and GRX, is a Dutch DJ
+            and record producer who was ranked number one on DJ Mag\'s Top 100 DJs list for three consecutive
+            years—2016, 2017, and 2018. He is best known for his singles Animals, In the Name of Love, and Scared to Be
+            Lonely. Garrix has performed at music festivals such as Coachella, Electric Daisy Carnival, Ultra Music
+            Festival, Tomorrowland, and Creamfields. In 2014, he headlined the first edition of Ultra South Africa,
+            making this his first major festival. In the same year, he became the youngest DJ to headline 2014 Ultra
+            Music Festival at the age of 17. He was a resident DJ at Spain\'s Hï Ibiza (2017) and Ushuaïa Ibiza (2016
+            and 2018). He founded the label Stmpd Rcrds in 2016, months after leaving Spinnin\' Records and before
+            signing with Sony Music.
+        </item>
+        <item>Pierre David Guetta is a French DJ and record producer. He has sold over 10 million albums and 65 million
+            singles globally, with more than 30 billion streams on spotify. Guetta was voted the number one DJ in the DJ
+            Mag Top 100 DJs polls in 2011, and throughout 2020 until 2023. In 2013, Billboard ranked his song "When Love
+            Takes Over" (featuring Kelly Rowland) as the number one dance-pop collaboration ever.
+        </item>
+        <item>Dimitri Vegas &amp; Like Mike are a Belgian–Greek DJ duo composed of brothers Dimitri Thivaios and Michael
+            Thivaios. They were ranked No. 1 on DJ Mag\'s Top 100 DJs list in 2015 and 2019, and No. 2 in 2014, 2016
+            through 2018, 2020 and 2023. They have performed at numerous festivals worldwide such as EXIT Festival,
+            Electric Daisy Carnival, Electric Zoo, Parookaville, UNTOLD Festival, Creamfields and Tomorrowland, where
+            they have been the official resident DJs since 2010. They have held summer DJ residencies in Ibiza at
+            Amnesia (2014–2016) and more recently Ushuaïa Ibiza (2017 to present).
+        </item>
+        <item>Alok has become one of the most prominent icons in the Brazilian electronic scene, with honors and awards,
+            such as "Best DJ in Brazil" by House Mag in 2014 and 2015, and being the only Brazilian in the top 25 in the
+            world the following year by DJ Mag magazine. In 2017, he was elected by Forbes Brasil as one of the most
+            influential people under the age of 30 in the country.
+        </item>
+        <item>Timothy Jude Smith, known by his stage name Timmy Trumpet, is an Australian musician, DJ, songwriter and
+            record producer. He has become known internationally for playing the trumpet live and making use of jazz
+            elements in dance music. Timmy Trumpet\'s breakthrough single "Freaks" with New Zealand rapper Savage was
+            certified gold by the RIAA, six times platinum by ARIA, and triple platinum by Recorded Music NZ. Timmy
+            Trumpet is currently ranked the number 5 DJ in the world, according to the DJ Mag Top 100.
+        </item>
+        <item>Armin Jozef Jacobus Daniël van Buuren is a Dutch DJ and record producer. Since 2001, he has hosted A State
+            of Trance (ASOT), a weekly radio show, which is broadcast to nearly 40 million listeners in 84 countries on
+            over 100 FM radio stations. According to the website DJs and Festivals, "the radio show propelled him to
+            stardom and helped cultivate an interest in trance music around the world".
+        </item>
+        <item>Nick Leonardus van de Wall, better known as Afrojack, is a Dutch DJ, music producer and remixer. In 2007,
+            he founded the record label Wall Recordings; his debut album Forget the World was released in 2014. Afrojack
+            regularly features as one of the ten best artists in the Top 100 DJs published by DJ Mag. He is also the CEO
+            of LDH Europe.
+        </item>
+        <item>Paul Nicholas Fisher, known by the stage name Fisher is an Australian music producer. He was nominated for
+            the 2018 ARIA Award for Best Dance Release as well as the Best Dance Recording category at the 61st Annual
+            Grammy Awards for his solo single "Losing It". Fisher is a member of Under Construction, with frequent
+            collaborator, Chris Lake.
+        </item>
+        <item>Lukas Rafael Ruiz Hespanhol, known as Vintage Culture, is a Brazilian DJ and record producer. He had a
+            great ascent of releasing remixes of songs like "Blue Monday" by New Order and "Another Brick in the Wall"
+            by Pink Floyd. These songs went viral with his versions of "Bete Balanço" by Cazuza and "Bidolibido" by
+            Fernanda Abreu. Vintage Culture is also a record company manager at Só Track Boa.
+        </item>
+        <item>Kim Min-ji, known as Peggy Gou, is a South Korean DJ, singer, songwriter and record producer based in
+            Berlin, Germany. She has released seven EPs on record labels including Ninja Tune and Phonica. In 2019, she
+            launched her own independent record label named Gudu Records, and released a DJ-Kicks compilation titled
+            DJ-Kicks: Peggy Gou, through !k7 Records. Her debut album I Hear You was released on 7 June 2024 through XL
+            Recordings.
+        </item>
+    </string-array>
+
+    <string-array name="songs_title">
+        <item>Gravity</item>
+        <item>Forever Young</item>
+        <item>Heroine</item>
+        <item>Higher State of Consciousness</item>
+        <item>Sound of da Police</item>
+        <item>Late Checkout</item>
+        <item>Don\'t Go</item>
+        <item>Boost Up</item>
+        <item>Electricity</item>
+        <item>Find The Way</item>
+    </string-array>
+
+    <string-array name="songs_artists">
+        <item>Martin Garrix, Sem Vox ft. Jaimes</item>
+        <item>David Guetta, Alphaville, Ava Max</item>
+        <item>Dimitri Vegas &amp; Like Mike</item>
+        <item>Alok, Firebeatz</item>
+        <item>Timmy Trumpet, Marnik, Ely Oaks, DES3ETT</item>
+        <item>Armin van Buuren, W&amp;W</item>
+        <item>Gil Glaze, Afrojack</item>
+        <item>Fisher, Flowdan</item>
+        <item>Vintage Culture, Fancy Inc, Meca</item>
+        <item>Peggy Gou</item>
+    </string-array>
+
+    <string-array name="djs_link">
+        <item>https://djmag.com/top100djs/2024/1/martin-garrix</item>
+        <item>https://djmag.com/top100djs/2024/2/david-guetta</item>
+        <item>https://djmag.com/top100djs/2024/3/dimitri-vegas-mike</item>
+        <item>https://djmag.com/top100djs/2024/4/alok</item>
+        <item>https://djmag.com/top100djs/2024/5/timmy-trumpet</item>
+        <item>https://djmag.com/top100djs/2024/6/armin-van-buuren</item>
+        <item>https://djmag.com/top100djs/2024/7/afrojack</item>
+        <item>https://djmag.com/top100djs/2024/8/fisher</item>
+        <item>https://djmag.com/top100djs/2024/9/vintage-culture</item>
+        <item>https://djmag.com/top100djs/2024/10/peggy-gou</item>
+    </string-array>
+
+    <string-array name="songs_link">
+        <item>https://open.spotify.com/album/5XjuB8WjardHuZpaMy6LXP</item>
+        <item>https://open.spotify.com/album/5a450MS1eKGQQAsqgvsZ6J</item>
+        <item>https://open.spotify.com/album/1UO9nuCWFo4NaLkAhQqsRT</item>
+        <item>https://open.spotify.com/album/2WHfvIIzdT7dLVLTajxjvv</item>
+        <item>https://open.spotify.com/album/19tOFbOwSqZkQONwDtxss9</item>
+        <item>https://open.spotify.com/album/7Gfq0uM4szOZyLqVjiBiKR</item>
+        <item>https://open.spotify.com/album/2VNVxJujnV5BMlGNR4E3mZ</item>
+        <item>https://open.spotify.com/album/58koXuocSFzeYdnmC4gyFK</item>
+        <item>https://open.spotify.com/album/6rDypUhYCZ0BVacAfSewuZ</item>
+        <item>https://open.spotify.com/album/11pq24uahxvbUMhXhmRdcN</item>
+    </string-array>
+</resources>
