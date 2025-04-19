@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DicodingEvent</string>
+    <string name="title_home">Home</string>
+    <string name="title_upcoming">Upcoming</string>
+    <string name="title_finished">Finished</string>
+    <string name="home_heading">Dicoding Event</string>
+    <string name="home_all">All Events</string>
+    <string name="home_upcoming">Upcoming Events</string>
+    <string name="home_finished">Finished Events</string>
+    <string name="null_event">Event tidak ditemukan</string>
+    <string name="search_hint">Cari event</string>
+    <string name="alt_banner">Banner event</string>
+    <string name="event_time">event time</string>
+    <string name="daftar">Daftar</string>
+</resources>
