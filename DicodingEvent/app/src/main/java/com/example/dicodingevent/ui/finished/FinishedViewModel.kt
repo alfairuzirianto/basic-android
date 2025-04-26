@@ -5,16 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.dicodingevent.data.response.EventResponse
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.data.retrofit.ApiConfig
-import com.example.dicodingevent.ui.upcoming.UpcomingViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class FinishedViewModel : ViewModel() {
-    private val _finishedEvents = MutableLiveData<List<ListEventsItem>>()
-    val finishedEvents: LiveData<List<ListEventsItem>> = _finishedEvents
+    private val _finishedEvents = MutableLiveData<List<EventData>>()
+    val finishedEvents: LiveData<List<EventData>> = _finishedEvents
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -38,13 +37,13 @@ class FinishedViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     _finishedEvents.value = response.body()?.listEvents
                 } else {
-                    Log.e(FinishedViewModel.TAG, "onFailure: ${response.message()}")
+                    Log.e(TAG, "onFailure: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<EventResponse>, t: Throwable) {
                 _isLoading.value = false
-                Log.e(FinishedViewModel.TAG, "onFailure: ${t.message}")
+                Log.e(TAG, "onFailure: ${t.message}")
             }
 
         })
@@ -60,13 +59,13 @@ class FinishedViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     _finishedEvents.value = response.body()?.listEvents
                 } else {
-                    Log.e(FinishedViewModel.TAG, "onFailure: ${response.message()}")
+                    Log.e(TAG, "onFailure: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<EventResponse>, t: Throwable) {
                 _isLoading.value = false
-                Log.e(FinishedViewModel.TAG, "onFailure: ${t.message}")
+                Log.e(TAG, "onFailure: ${t.message}")
             }
 
         })

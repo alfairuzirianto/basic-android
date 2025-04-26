@@ -5,21 +5,21 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.dicodingevent.data.response.EventResponse
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.data.retrofit.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class HomeViewModel : ViewModel() {
-    private val _allEvents = MutableLiveData<List<ListEventsItem>>()
-    val allEvents: LiveData<List<ListEventsItem>> = _allEvents
+    private val _allEvents = MutableLiveData<List<EventData>>()
+    val allEvents: LiveData<List<EventData>> = _allEvents
 
-    private val _upcomingEvents = MutableLiveData<List<ListEventsItem>>()
-    val upcomingEvents: LiveData<List<ListEventsItem>> = _upcomingEvents
+    private val _upcomingEvents = MutableLiveData<List<EventData>>()
+    val upcomingEvents: LiveData<List<EventData>> = _upcomingEvents
 
-    private val _finishedEvents = MutableLiveData<List<ListEventsItem>>()
-    val finishedEvents: LiveData<List<ListEventsItem>> = _finishedEvents
+    private val _finishedEvents = MutableLiveData<List<EventData>>()
+    val finishedEvents: LiveData<List<EventData>> = _finishedEvents
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -82,7 +82,7 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun getSomeFinishedEvents() {
-        _isLoading.value = true;
+        _isLoading.value = true
         val client = ApiConfig.getApiService().getEvents(INACTIVE, LIMIT)
         Log.d("API Debug", "Request URL: ${client.request().url}")
         client.enqueue(object : Callback<EventResponse> {

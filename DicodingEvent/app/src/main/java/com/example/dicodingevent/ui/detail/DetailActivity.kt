@@ -1,15 +1,14 @@
 package com.example.dicodingevent.ui.detail
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
 import com.bumptech.glide.Glide
-import com.example.dicodingevent.adapter.HomeUpcomingAdapter
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.databinding.ActivityDetailBinding
 import androidx.core.net.toUri
 
@@ -24,8 +23,8 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val EXTRA_EVENT_ID = intent.getIntExtra("EVENT_ID", -1)
-        viewModel.findEvent(EXTRA_EVENT_ID)
+        val extraEventID = intent.getIntExtra("EVENT_ID", -1)
+        viewModel.findEvent(extraEventID)
 
         viewModel.event.observe(this) { event ->
             setDetailEvent(event)
@@ -36,7 +35,8 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun setDetailEvent(event: ListEventsItem) {
+    @SuppressLint("SetTextI18n")
+    private fun setDetailEvent(event: EventData) {
         binding.apply {
             Glide.with(this@DetailActivity)
                 .load(event.mediaCover)
@@ -44,9 +44,9 @@ class DetailActivity : AppCompatActivity() {
             textTitle.text = event.name
             textOwner.text = "oleh ${event.ownerName}"
             textTime.text = event.beginTime
-            textQuota.text = "${event.quota - event.registrants} (sisa quota)"
+            textQuota.text = "${event.quota - event.registrants} (quota left)"
             textDesc.text = HtmlCompat.fromHtml(
-                event.description.toString(),
+                event.description,
                 HtmlCompat.FROM_HTML_MODE_LEGACY
             )
             btnRegister.setOnClickListener {

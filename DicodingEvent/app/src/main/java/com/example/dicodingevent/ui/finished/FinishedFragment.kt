@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dicodingevent.adapter.FinishedAdapter
-import com.example.dicodingevent.adapter.HomeUpcomingAdapter
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.databinding.FragmentFinishedBinding
 
 class FinishedFragment : Fragment() {
@@ -46,7 +43,7 @@ class FinishedFragment : Fragment() {
             searchView.setupWithSearchBar(searchBar)
             searchView
                 .editText
-                .setOnEditorActionListener { textView, actionId, event ->
+                .setOnEditorActionListener { _, _, _ ->
                     searchBar.setText(searchView.text)
                     searchView.hide()
                     finishedViewModel.searchEvents(searchView.text.toString())
@@ -57,7 +54,7 @@ class FinishedFragment : Fragment() {
         return root
     }
 
-    private fun setFinishedData(finishedEvents: List<ListEventsItem>) {
+    private fun setFinishedData(finishedEvents: List<EventData>) {
         val adapter = FinishedAdapter()
         adapter.submitList(finishedEvents)
         binding.rvFinished.adapter = adapter

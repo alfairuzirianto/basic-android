@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.databinding.ItemRectangleBinding
 import com.example.dicodingevent.ui.detail.DetailActivity
 
-class UpcomingAdapter : ListAdapter<ListEventsItem, UpcomingAdapter.ViewHolder>(DIFF_CALLBACK) {
+class UpcomingAdapter : ListAdapter<EventData, UpcomingAdapter.ViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemRectangleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
@@ -23,7 +23,7 @@ class UpcomingAdapter : ListAdapter<ListEventsItem, UpcomingAdapter.ViewHolder>(
     }
 
     class ViewHolder(private val binding: ItemRectangleBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(event: ListEventsItem) {
+        fun bind(event: EventData) {
             binding.apply {
                 Glide.with(itemView.context)
                     .load(event.imageLogo)
@@ -39,17 +39,17 @@ class UpcomingAdapter : ListAdapter<ListEventsItem, UpcomingAdapter.ViewHolder>(
     }
 
     companion object {
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ListEventsItem>() {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<EventData>() {
             override fun areItemsTheSame(
-                oldItem: ListEventsItem,
-                newItem: ListEventsItem
+                oldItem: EventData,
+                newItem: EventData
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: ListEventsItem,
-                newItem: ListEventsItem
+                oldItem: EventData,
+                newItem: EventData
             ): Boolean {
                 return oldItem == newItem
             }

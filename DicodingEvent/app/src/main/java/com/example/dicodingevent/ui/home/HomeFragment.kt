@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dicodingevent.adapter.FinishedAdapter
-import com.example.dicodingevent.data.response.ListEventsItem
+import com.example.dicodingevent.data.response.EventData
 import com.example.dicodingevent.databinding.FragmentHomeBinding
 import com.example.dicodingevent.adapter.HomeUpcomingAdapter
 
@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    private fun setAllEvents(allEvents: List<ListEventsItem>){
+    private fun setAllEvents(allEvents: List<EventData>){
         val adapter = FinishedAdapter()
         adapter.submitList(allEvents)
         binding.rvAll.adapter = adapter
@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
             binding.textNullAll.visibility = View.VISIBLE
         }
     }
-    private fun setFinishedData(finishedEvents: List<ListEventsItem>){
+    private fun setFinishedData(finishedEvents: List<EventData>){
         val adapter = FinishedAdapter()
         adapter.submitList(finishedEvents)
         binding.rvFinished.adapter = adapter
@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setUpcomingData(upcomingEvents: List<ListEventsItem>) {
+    private fun setUpcomingData(upcomingEvents: List<EventData>) {
         val adapter = HomeUpcomingAdapter()
         adapter.submitList(upcomingEvents)
         binding.rvUpcoming.adapter = adapter
