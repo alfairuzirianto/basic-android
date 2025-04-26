@@ -14,6 +14,8 @@ import androidx.core.net.toUri
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
+    private var extraEventID: Int = -1
+    private var extraActive: Boolean = false
     private val viewModel by viewModels<DetailViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +25,8 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val extraEventID = intent.getIntExtra("EVENT_ID", -1)
+        extraEventID = intent.getIntExtra("EVENT_ID", -1)
+        extraActive = intent.getBooleanExtra("ACTIVE", false)
         viewModel.findEvent(extraEventID)
 
         viewModel.event.observe(this) { event ->
@@ -51,6 +54,10 @@ class DetailActivity : AppCompatActivity() {
             )
             btnRegister.setOnClickListener {
                 startActivity(Intent(Intent.ACTION_VIEW, event.link.toUri()))
+            }
+            if (!extraActive) {
+                btnRegister.text = "Event ini telah berakhir"
+                btnRegister.isEnabled = false
             }
         }
     }

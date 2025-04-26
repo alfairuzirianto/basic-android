@@ -31,6 +31,7 @@ class FinishedAdapter : ListAdapter<EventData, FinishedAdapter.ViewHolder>(DIFF_
                 textEvent.text = event.name
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra("ACTIVE", false)
                     intent.putExtra("EVENT_ID", event.id)
                     itemView.context.startActivity(intent)
                 }

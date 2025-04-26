@@ -1,5 +1,8 @@
 package com.example.dicodingevent.ui.upcoming
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,30 +31,48 @@ class UpcomingFragment : Fragment() {
         _binding = FragmentUpcomingBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        upcomingViewModel.upcomingEvents.observe(viewLifecycleOwner) { upcomingEvents ->
-            setUpcomingData(upcomingEvents)
-        }
+        if(isOnline()) {
+            binding.container.visibility = View.VISIBLE
+            binding.tvNoInternet.visibility = View.GONE
 
-        upcomingViewModel.isLoading.observe(viewLifecycleOwner) {
-            showLoading(it)
+            upcomingViewModel.upcomingEvents.observe(viewLifecycleOwner) { upcomingEvents ->
+                setUpcomingData(upcomingEvents)
+            }
+
+            upcomingViewModel.isLoading.observe(viewLifecycleOwner) {
+                showLoading(it)
+            }
+
+
+            with(binding) {
+                searchView.setupWithSearchBar(searchBar)
+                searchView
+                    .editText
+                    .setOnEditorActionListener { _, _, _ ->
+                        searchBar.setText(searchView.text)
+                        searchView.hide()
+                        upcomingViewModel.searchEvents(searchView.text.toString())
+                        false
+                    }
+            }
+        }
+        else {
+            binding.container.visibility = View.GONE
+            binding.tvNoInternet.visibility = View.VISIBLE
         }
 
         val layoutManager = LinearLayoutManager(context)
         binding.rvUpcoming.layoutManager = layoutManager
 
-        with(binding) {
-            searchView.setupWithSearchBar(searchBar)
-            searchView
-                .editText
-                .setOnEditorActionListener { _, _, _ ->
-                    searchBar.setText(searchView.text)
-                    searchView.hide()
-                    upcomingViewModel.searchEvents(searchView.text.toString())
-                    false
-                }
-        }
-
         return root
+    }
+
+    private fun isOnline(): Boolean {
+        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork?:return false
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)?:return false
+        return networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
     private fun setUpcomingData(upcomingEvents: List<EventData>) {

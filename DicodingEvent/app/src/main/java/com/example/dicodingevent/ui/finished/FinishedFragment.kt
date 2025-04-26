@@ -1,5 +1,8 @@
 package com.example.dicodingevent.ui.finished
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,30 +31,49 @@ class FinishedFragment : Fragment() {
         _binding = FragmentFinishedBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        finishedViewModel.finishedEvents.observe(viewLifecycleOwner) { finishedEvents ->
-            setFinishedData(finishedEvents)
+        if(isOnline()) {
+            binding.container.visibility = View.VISIBLE
+            binding.tvNoInternet.visibility = View.GONE
+
+            finishedViewModel.finishedEvents.observe(viewLifecycleOwner) { finishedEvents ->
+                setFinishedData(finishedEvents)
+            }
+
+            finishedViewModel.isLoading.observe(viewLifecycleOwner) {
+                showLoading(it)
+            }
+
+
+            with(binding) {
+                searchView.setupWithSearchBar(searchBar)
+                searchView
+                    .editText
+                    .setOnEditorActionListener { _, _, _ ->
+                        searchBar.setText(searchView.text)
+                        searchView.hide()
+                        finishedViewModel.searchEvents(searchView.text.toString())
+                        false
+                    }
+            }
+        }
+        else {
+            binding.container.visibility = View.GONE
+            binding.tvNoInternet.visibility = View.VISIBLE
         }
 
-        finishedViewModel.isLoading.observe(viewLifecycleOwner) {
-            showLoading(it)
-        }
 
         val layoutManager = LinearLayoutManager(context)
         binding.rvFinished.layoutManager = layoutManager
 
-        with(binding) {
-            searchView.setupWithSearchBar(searchBar)
-            searchView
-                .editText
-                .setOnEditorActionListener { _, _, _ ->
-                    searchBar.setText(searchView.text)
-                    searchView.hide()
-                    finishedViewModel.searchEvents(searchView.text.toString())
-                    false
-                }
-        }
-
         return root
+    }
+
+    private fun isOnline(): Boolean {
+        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork?:return false
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)?:return false
+        return networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
     private fun setFinishedData(finishedEvents: List<EventData>) {

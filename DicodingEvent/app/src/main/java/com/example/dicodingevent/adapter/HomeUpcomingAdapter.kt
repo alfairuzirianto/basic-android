@@ -26,6 +26,7 @@ class HomeUpcomingAdapter : ListAdapter<EventData, HomeUpcomingAdapter.ViewHolde
                 textEvent.text = event.name
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra("ACTIVE", true)
                     intent.putExtra("EVENT_ID", event.id)
                     itemView.context.startActivity(intent)
                 }

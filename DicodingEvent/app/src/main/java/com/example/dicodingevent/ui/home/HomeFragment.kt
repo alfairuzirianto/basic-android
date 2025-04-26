@@ -1,5 +1,8 @@
 package com.example.dicodingevent.ui.home
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,21 +29,31 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        homeViewModel.allEvents.observe(viewLifecycleOwner) { allEvents ->
-            setAllEvents(allEvents)
+        if(isOnline()) {
+            binding.container.visibility = View.VISIBLE
+            binding.tvNoInternet.visibility = View.GONE
+
+            homeViewModel.allEvents.observe(viewLifecycleOwner) { allEvents ->
+                setAllEvents(allEvents)
+            }
+
+            homeViewModel.upcomingEvents.observe(viewLifecycleOwner) { upcomingEvents ->
+                setUpcomingData(upcomingEvents)
+            }
+
+            homeViewModel.finishedEvents.observe(viewLifecycleOwner) { finishedEvents ->
+                setFinishedData(finishedEvents)
+            }
+
+            homeViewModel.isLoading.observe(viewLifecycleOwner) {
+                showLoading(it)
+            }
+        }
+        else {
+            binding.container.visibility = View.GONE
+            binding.tvNoInternet.visibility = View.VISIBLE
         }
 
-        homeViewModel.upcomingEvents.observe(viewLifecycleOwner) { upcomingEvents ->
-            setUpcomingData(upcomingEvents)
-        }
-
-        homeViewModel.finishedEvents.observe(viewLifecycleOwner) { finishedEvents ->
-            setFinishedData(finishedEvents)
-        }
-
-        homeViewModel.isLoading.observe(viewLifecycleOwner) {
-            showLoading(it)
-        }
 
         val layoutManager1 = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvUpcoming.layoutManager = layoutManager1
@@ -52,6 +65,14 @@ class HomeFragment : Fragment() {
         binding.rvAll.layoutManager = layoutManager3
 
         return root
+    }
+
+    private fun isOnline(): Boolean {
+        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork?:return false
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)?:return false
+        return networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
     private fun setAllEvents(allEvents: List<EventData>){
@@ -82,8 +103,6 @@ class HomeFragment : Fragment() {
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-        binding.progressBar1.visibility = if (isLoading) View.VISIBLE else View.GONE
-        binding.progressBar2.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {

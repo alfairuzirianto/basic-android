@@ -12,4 +12,5 @@
     <string name="alt_banner">Banner event</string>
     <string name="event_time">event time</string>
     <string name="daftar">Daftar</string>
+    <string name="no_internet">Tidak ada internet x_x</string>
 </resources>
