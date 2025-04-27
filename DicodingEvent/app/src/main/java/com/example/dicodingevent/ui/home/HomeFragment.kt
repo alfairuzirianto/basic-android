@@ -33,10 +33,6 @@ class HomeFragment : Fragment() {
             binding.container.visibility = View.VISIBLE
             binding.tvNoInternet.visibility = View.GONE
 
-            homeViewModel.allEvents.observe(viewLifecycleOwner) { allEvents ->
-                setAllEvents(allEvents)
-            }
-
             homeViewModel.upcomingEvents.observe(viewLifecycleOwner) { upcomingEvents ->
                 setUpcomingData(upcomingEvents)
             }
@@ -61,9 +57,6 @@ class HomeFragment : Fragment() {
         val layoutManager2 = LinearLayoutManager(context)
         binding.rvFinished.layoutManager = layoutManager2
 
-        val layoutManager3 = LinearLayoutManager(context)
-        binding.rvAll.layoutManager = layoutManager3
-
         return root
     }
 
@@ -75,14 +68,6 @@ class HomeFragment : Fragment() {
                 networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
-    private fun setAllEvents(allEvents: List<EventData>){
-        val adapter = FinishedAdapter()
-        adapter.submitList(allEvents)
-        binding.rvAll.adapter = adapter
-        if (allEvents.isEmpty()) {
-            binding.textNullAll.visibility = View.VISIBLE
-        }
-    }
     private fun setFinishedData(finishedEvents: List<EventData>){
         val adapter = FinishedAdapter()
         adapter.submitList(finishedEvents)
@@ -102,7 +87,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.progressBar1.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.progressBar2.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {

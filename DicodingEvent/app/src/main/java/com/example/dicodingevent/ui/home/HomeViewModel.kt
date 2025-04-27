@@ -12,9 +12,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class HomeViewModel : ViewModel() {
-    private val _allEvents = MutableLiveData<List<EventData>>()
-    val allEvents: LiveData<List<EventData>> = _allEvents
-
     private val _upcomingEvents = MutableLiveData<List<EventData>>()
     val upcomingEvents: LiveData<List<EventData>> = _upcomingEvents
 
@@ -28,35 +25,11 @@ class HomeViewModel : ViewModel() {
         private const val TAG = "HomeViewModel"
         private const val LIMIT = 5
         private const val INACTIVE = 0
-        private const val ALL = -1
     }
 
     init {
-        getAllEvents()
         getSomeUpcomingEvents()
         getSomeFinishedEvents()
-    }
-
-    private fun getAllEvents() {
-        _isLoading.value = true
-        val client = ApiConfig.getApiService().getEvents(active = ALL)
-        Log.d("API Debug", "Request URL: ${client.request().url}")
-        client.enqueue(object : Callback<EventResponse> {
-            override fun onResponse(call: Call<EventResponse>, response: Response<EventResponse>) {
-                _isLoading.value = false
-                if (response.isSuccessful) {
-                    _allEvents.value = response.body()?.listEvents
-                } else {
-                    Log.e(TAG, "onFailure: ${response.message()}")
-                }
-            }
-
-            override fun onFailure(call: Call<EventResponse>, t: Throwable) {
-                _isLoading.value = false
-                Log.e(TAG, "onFailure: ${t.message}")
-            }
-
-        })
     }
 
     private fun getSomeUpcomingEvents() {

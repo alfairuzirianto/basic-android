@@ -4,7 +4,6 @@
     <string name="title_upcoming">Upcoming</string>
     <string name="title_finished">Finished</string>
     <string name="home_heading">Dicoding Event</string>
-    <string name="home_all">All Events</string>
     <string name="home_upcoming">Upcoming Events</string>
     <string name="home_finished">Finished Events</string>
     <string name="null_event">Event tidak ditemukan</string>
