@@ -1,3 +1,0 @@
-com.example.simplesqlite.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
